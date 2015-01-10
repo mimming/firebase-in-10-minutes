@@ -12,7 +12,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
 
   <link rel="stylesheet" href="css/reveal.min.css">
   <link rel="stylesheet" href="css/theme/default.css" id="theme">
@@ -66,6 +66,7 @@
 
     }
 
+
     ul.multicol li {
       display: inline-block;
       width: 400px;
@@ -82,6 +83,18 @@
     .reveal section img {
       max-height: 65%;
     }
+
+    .slides section {
+      font-size: 125%;
+    }
+    .reveal pre code {
+      font-size: 120%;
+    }
+    .reveal section img {
+      max-height: 65%;
+    }
+
+
   </style>
 
 </head>
@@ -95,20 +108,12 @@
     <section>
       <img src="img/firebase-logo.png" style="border:none; box-shadow: none; background: none;">
 
-      <h3>in 10 minutes</h3>
+      <p>Makes <strike>realtime</strike> multiplayer stuff easy</p>
 
       <p>
         <small>Created by <a href="https://mimming.com">Jenny Tong</a> / <a href="http://twitter.com/baconatedgeek">@BaconatedGeek</a>
         </small>
       </p>
-    </section>
-
-    <section>
-      <img src="img/firebase-logo.png" style="border:none; box-shadow: none; background: none;">
-      <br/> <br/>
-
-      <h3>Makes realtime stuff easy</h3>
-
     </section>
 
     <section data-markdown>
@@ -121,131 +126,129 @@
       </script>
     </section>
 
+    <section data-markdown>
+      <script type="text/template">
+        ## Realtime data is
+        ### Data best served fresh
+
+        ![Value over time](img/graph.png)
+      </script>
+    </section>
     <section>
-      <section data-markdown>
-        <script type="text/template">
-          ## Realtime data is
-          ### Data best served fresh
+      <h2>Realtime data is</h2>
 
-          ![Value over time](img/graph.png)
-        </script>
-      </section>
-      <section>
-        <h2>Realtime data is</h2>
+      <h3>Where your Muni bus is</h3>
 
-        <h3>Where your Muni bus is</h3>
+      <div id="map-canvas" style="width: 100%; height: 550px"></div>
+    </section>
+    <section>
+      <h2>Realtime data is</h2>
 
-        <div id="map-canvas" style="width: 100%; height: 600px"></div>
-      </section>
-      <section>
-        <h2>Realtime data is</h2>
+      <h3>Collaborative drawing</h3>
 
-        <h3>Collaborative drawing</h3>
+      <iframe style="background-color: #fff; overflow: hidden;"
+              src="https://wb-mobile-demo.firebaseapp.com/#-JfG46lKHDJc3Qmys11s" width="805" height="485"></iframe>
+      
+      <br/><a href="http://tinyurl.com/gxdraws">http://tinyurl.com/gxdraws</a>
+    </section>
+    <section>
+      <h2>Realtime data is</h2>
 
-        <iframe style="background-color: #fff; overflow: hidden;"
-                src="https://wb-mobile-demo.firebaseapp.com/#-JW6at3UJLHnDSE72DxR" width="805" height="485"></iframe>
+      <h3>Game state</h3>
+      <br/>
 
-      </section>
-      <section>
-        <h2>Realtime data is</h2>
+      <iframe style="background-color: #fff; overflow: hidden;"
+              src="./asteroids" width="805" height="485"></iframe>
+      
+      <br/><a href="http://tinyurl.com/gxasteroids">http://tinyurl.com/gxasteroids</a>
 
-        <h3>Cryptocurrency prices</h3>
-        <br/>
-
-        <div id="btc-quote" style="margin-left: 375px; margin-right: 375px;"></div>
-
-      </section>
     </section>
 
 
     <section>
-      <section>
-        <h2>Realtime data is hard</h2>
+      <h2>Realtime data is hard</h2>
 
-        <h3>Many problems to solve.</h3>
+      <p>Many problems to solve.</p>
 
-        <br/>
+      <br/>
 
-        <div class="fragment" style="float: left; width: 300px;">
-          Complex transport<br/>
-          <img src="img/complex-icon.png">
-        </div>
-        <div  class="fragment" style="float: left; width: 300px;">
-          Unreliable networks<br/>
-          <img src="img/no-network-icon.png">
-        </div>
-        <div  class="fragment"  style="float: left; width: 300px;">
-          Multi-platform<br/>
-          <img src="img/multi-device-icon.png">
-        </div>
-      </section>
-      <section>
-        <h2>Realtime data is hard</h2>
-
-        <p>It's difficult to scale.</p>
-        <img class="fragment" src="img/backend-reqs.gif"
-             style="-webkit-filter: invert(100%) hue-rotate(180deg);">
-      </section>
+      <div class="fragment" style="float: left; width: 300px;">
+        Complex transport<br/>
+        <img src="img/complex-icon.png">
+      </div>
+      <div class="fragment" style="float: left; width: 300px;">
+        Unreliable networks<br/>
+        <img src="img/no-network-icon.png">
+      </div>
+      <div class="fragment" style="float: left; width: 300px;">
+        Multi-platform<br/>
+        <img src="img/multi-device-icon.png">
+      </div>
     </section>
 
     <section>
       <h2>Firebase makes it easy</h2>
 
       <p>Cloud noSql database</p>
-      <img src="img/firebase-icon.png" style="border:none; box-shadow: none; background: none;">
+      <img src="img/firebase-overview2.png" style="border:none; box-shadow: none; background: none;">
     </section>
 
     <section>
-      <h2>Firebase makes it easy</h2>
+      <h2>Some JavaScript Code</h2>
+      <br/>
+      <div class="fragment">
+        <h4>Write Data</h4>
+<pre style="margin-bottom:-50px;"><code data-trim>
+var ref = new Firebase("https://gxdev.firebaseio.com/");
 
-      <h3>Client libraries and framework integrations</h3>
+ref.set("Hello GXdev!");
+</code></pre>
+      </div>
+      <br/><br/>
+      <div class="fragment">
+        <h4>Read Data</h4>
+<pre><code data-trim>
+ref.on("value", function (snapshot) {
+  var data = snapshot.val();
+  console.log(data);
+});
+</code></pre>
+      </div>
+    </section>
+
+
+    <section>
+      <h3>Works with</h3>
 
       <img src="img/frameworks-transparent.png" style="background: none; box-shadow: none; border: none;">
     </section>
 
     <section>
-      <h2>Firebase makes it easy</h2>
+      <h3>Other Helpful Goodies</h3>
 
-      <h3>Eliminates or reduces back end code</h3>
-      <br>
-      <dl>
-        <style>
-          dt {
-            float: left;
-            clear: both;
-            width: 400px;
-            max-height: 160px;
-          }
+      <br/>
 
-          dd {
-            float: left;
-            width: 400px;
-            max-height: 160px;
-          }
+      <div style="float: left; margin: 0 50px; font-size:.7em; text-align:center;">
+        <img src="img/database.png" style="height: 200px;"/><br/><b>Data</b><br />
+        <img src="img/parking-map.png" style="height: 200px;"/><br/><b>Open Data Sets</b>
+      </div>
+      <div style="float: right; margin: 0 50px; font-size:.7em; text-align:center;">
+        <img src="img/userMan.png" style="height: 200px;"/><br/><b>Auth & Security</b><br />
+        <img src="img/hosting.png" style="height: 200px;"/><br/><b>Hosting</b>
+      </div>
 
-          .reveal dl img {
-            max-width: 250px;
-            max-height: 100px;
-          }
-        </style>
-        <dt><img src="img/cli.png"></dt>
-        <dd style="padding-top: 50px; padding-left: 20px;">Production grade hosting</dd>
-        <dt><img src="img/lock.png"></dt>
-        <dd style="padding-top: 50px; padding-left: 20px;">Rich server side security rules</dd>
-        <dt><img src="img/simple-login.png"></dt>
-        <dd style="padding-top: 50px; padding-left: 20px;">Simple Login user authentication</dd>
-        <dt><img src="img/parking-map.png"></dt>
-        <dd style="padding-top: 50px; padding-left: 20px;">Open data sets</dd>
-      </dl>
     </section>
-
 
     <section>
-      <h1>THE END</h1>
-
-      <p>If you have questions, come say hi to me.</p>
+      <h1>The End</h1>
+      <ul>
+        <li>Slides: <a href="http://mimming.com/presos/firebase-in-10-minutes/">mimming.com/presos/firebase-in-10-minutes</a></li>
+        <li>MMO Asteroids: <a href="https://github.com/firebase/HTML5-Asteroids">github.com/firebase/HTML5-Asteroids</a></li>
+        <li>Try Firebase: <a href="https://www.firebase.com/tutorial">firebase.com/tutorial</a></li>
+      </ul>
+      <br/><br/>
+      Questions? Want swag? Come say hi to me!
     </section>
-
   </div>
 
 </div>
@@ -294,7 +297,7 @@
   });
 
   Reveal.addEventListener('slidechanged', function (event) {
-    if (event.indexh === 3 && event.indexv === 1) {
+    if (event.indexh === 3) {
       transitmapstart()
     }
   });
