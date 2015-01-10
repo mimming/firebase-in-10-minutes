@@ -2,7 +2,7 @@
 
 Firebase makes building realtime stuff easy. Jenny is going to show you how in about 10 minutes, with slides and demos.
 
-Slides live on [mimming.com](https://mimming.com/presos/synchronizing-state/)
+Slides live on [mimming.com](https://mimming.com/presos/firebase-in-10-minutes/)
 
 ## Presented at
 - [neoHack14](http://www.meetup.com/Women-Who-Code-SF/events/182497842/?oc=evam) - [slides](https://github.com/mimming/synchronizing-state/releases/tag/whg-2014-09)
