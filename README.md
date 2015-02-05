@@ -1,3 +1,6 @@
+# Deprecated
+I merged this deck into a single [Firebase Overview](https://github.com/mimming/firebase-overview). Go use those slides instead. They're better.
+
 # Firebase in 10 minutes
 
 Firebase makes building realtime stuff easy. Jenny is going to show you how in about 10 minutes, with slides and demos.
